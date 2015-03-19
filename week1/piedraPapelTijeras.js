@@ -2,33 +2,34 @@ var comparar = function (eleccion1, eleccion2){
     var result;
     
     if (eleccion1==eleccion2){
-        result = "¡Es un empate!";
-        console.log ("¡Es un empate!");        
+    	console.log ("¡Es un empate!"); 
+        result = "¡Es un empate!";               
     } else if (eleccion1=="piedra"){
         if (eleccion2=="tijeras"){
-            result = "piedra gana";
-            console.log ("piedra gana"); 
+        	console.log ("piedra gana"); 
+            result = "piedra gana";            
         }else{
-            result = "papel gana";
-            console.log ("papel gana"); 
+        	console.log ("papel gana");
+            result = "papel gana";             
         }
         
     }else if(eleccion1=="papel"){
         if (eleccion2=="piedra"){
-            result = "papel gana";
-            console.log ("papel gana"); 
+        	console.log ("papel gana"); 
+            result = "papel gana";            
         }else{
-            result = "tijeras gana";
-            console.log ("tijeras gana"); 
+        	console.log ("tijeras gana"); 
+            result = "tijeras gana";            
         }
         
     }else if(eleccion1=="tijeras"){
         if (eleccion2=="piedra"){
-            result = "piedra gana";
-            console.log ("piedra gana"); 
+        	console.log ("piedra gana");
+            result = "piedra gana";             
         }else{
+        	console.log ("tijeras gana"); 
             result = "tijeras gana";
-            console.log ("tijeras gana"); 
+            
         }
         
     }
@@ -43,6 +44,14 @@ if (computadorEscoge <0.34){
 	computadorEscoge = "papel";
 }else{
 	computadorEscoge = "tijeras";
+}
+
+if (usuarioEscoge <0.34){
+	usuarioEscoge = "piedra";
+}else if(usuarioEscoge <=0.67){
+	usuarioEscoge = "papel";
+}else{
+	usuarioEscoge = "tijeras";
 }
 
 comparar(usuarioEscoge, computadorEscoge);
