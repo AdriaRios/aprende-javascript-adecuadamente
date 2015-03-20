@@ -1,5 +1,5 @@
 /*
-*Ejemplo 1 Tema 2 de eloquentjavascript.net
+*Ejercicio 1 Tema 2 de eloquentjavascript.net
 *
 */
 
