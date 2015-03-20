@@ -2,7 +2,7 @@
 *Ejercicio 3 Tema 2 de eloquentjavascript.net
 *
 */
-var boardSize=8;
+var boardSize=64;
 var chessBoard ="";
 for (var i = 1; i <= boardSize; i++) { 
 	for (var j = 1; j <= boardSize; j++) { 
