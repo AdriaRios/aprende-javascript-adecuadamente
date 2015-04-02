@@ -1,0 +1,74 @@
+<html> 
+  <head>
+    <title>My home page</title>
+  </head>
+  <body>
+  
+  </body>
+</html>
+<style>
+  /* Defines a cleaner look for tables */
+  table  { border-collapse: collapse; }
+  td, th { border: 1px solid black; padding: 3px 8px; }
+  th     { text-align: left; }
+</style>
+
+<script>
+  function buildTable(data) {  
+    var tableNode = document.createElement("table");
+    console.log ("tableNode "+ tableNode);
+    var titleNode= document.createElement("tr");
+    console.log ("tr "+ titleNode);
+
+    tableNode.appendChild(titleNode);
+
+    var nameTH = document.createElement("th")
+    titleNode.appendChild(nameTH);
+    var heightTH = document.createElement("th")
+    titleNode.appendChild(heightTH);
+    var countryTH = document.createElement("th")
+    titleNode.appendChild(countryTH);
+
+    var nameText= document.createTextNode("name");
+    nameTH.appendChild(nameText);
+    var heightText=document.createTextNode("height");
+    heightTH.appendChild(heightText);
+    var countryText=document.createTextNode("country");
+    countryTH.appendChild(countryText);
+
+    for (var i = 0; i < data.length; i++) {
+      var mountainNode= document.createElement("tr");
+      tableNode.appendChild(mountainNode);
+
+      var mountainNameTH = document.createElement("td")
+      mountainNode.appendChild(mountainNameTH);
+      var mountainHeightTH = document.createElement("td")
+      mountainNode.appendChild(mountainHeightTH);
+      var mountainCountryTH = document.createElement("td")
+      mountainNode.appendChild(mountainCountryTH);
+
+      var mountainNameText= document.createTextNode(data[i].name);
+      mountainNameTH.appendChild(mountainNameText);
+      var mountainHeightText=document.createTextNode(data[i].height);
+      mountainHeightTH.appendChild(mountainHeightText);
+      var mountainCountryText=document.createTextNode(data[i].country);
+      mountainCountryTH.appendChild(mountainCountryText);
+
+    };
+
+    return tableNode;
+  }
+
+
+  var MOUNTAINS = [
+    {name: "Kilimanjaro", height: 5895, country: "Tanzania"},
+    {name: "Everest", height: 8848, country: "Nepal"},
+    {name: "Mount Fuji", height: 3776, country: "Japan"},
+    {name: "Mont Blanc", height: 4808, country: "Italy/France"},
+    {name: "Vaalserberg", height: 323, country: "Netherlands"},
+    {name: "Denali", height: 6168, country: "United States"},
+    {name: "Popocatepetl", height: 5465, country: "Mexico"}
+  ];
+
+  document.body.appendChild(buildTable(MOUNTAINS));
+</script>
