@@ -53,6 +53,7 @@ Menu.prototype = {
   startClick: function() {  
     // start button click handler
     // start the 'play' state    
+    console.log ("click");
     this.game.state.start('play');
   },
   update: function() {

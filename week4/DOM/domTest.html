@@ -1,0 +1,49 @@
+<! DOCTYPE html> 
+<html> 
+  <head>
+    <title>My home page</title>
+  </head>
+  <body>
+    <h1>My home page</h1>
+    <p>One</p>
+	<p>Two</p>
+	<p>Three</p>
+    <p>Hello, I am Marijn and this is my home page.</p>
+    <p>I also wrote a book! Read it
+      <a href="http://eloquentjavascript.net">here</a>
+      <a href="http://sport.es">sport</a>
+  	</p>
+  </body>
+</html>
+
+<script type="text/javascript">
+	console.log ("document.documentElement");
+	console.log (document.documentElement);
+	console.log ("document.head");
+	console.log (document.head);
+	console.log ("document.body");
+	console.log (document.body);
+
+	console.log ("document.body.childNodes");
+	console.log (document.body.childNodes);
+
+	console.log ("document.body.parentNode");
+	console.log (document.body.parentNode );
+	//Esto funciona porque test() se llama cuando te has asegurado que todo está cargado, si se llamara fuera no funcionaría
+	window.onload=function (){
+		test();
+	}
+
+	//Cambias párrafos de sitio
+	var paragraphs = document.body.getElementsByTagName("p");
+  	document.body.insertBefore(paragraphs[2], paragraphs[0]);
+
+	var link = document.body.getElementsByTagName("a")[0];
+	console.log(link.href);
+
+	var link2 = document.body.getElementsByTagName("a")[1];
+	console.log(link2.href);
+	
+</script>
+<script type="text/javascript" src="test.js"></script>
+

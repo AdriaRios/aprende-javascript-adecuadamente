@@ -1,0 +1,39 @@
+<blockquote id="quote">
+  No book can ever be finished. While working on it we learn
+  just enough to find it immature the moment we turn away
+  from it.
+</blockquote>
+
+<p id="para" style="border: 3px solid red;color: purple">
+  I'm boxed in
+</p>
+
+<script>
+  function elt(type) {
+    var node = document.createElement(type);
+    for (var i = 1; i < arguments.length; i++) {
+      var child = arguments[i];
+      if (typeof child == "string")
+        child = document.createTextNode(child);
+      node.appendChild(child);
+    }
+    return node;
+  }
+
+//Método que añade nodos al HTML
+  document.getElementById("quote").appendChild(
+    elt("footer", "-",
+        elt("strong", "Karl Popper"),
+        ", preface to the second editon of ",
+        elt("em", "The Open Society and Its Enemies"),
+        ", 1950"));
+
+   var para = document.body.getElementsByTagName("p")[0];
+  console.log("clientHeight:", para.clientHeight);
+  console.log("offsetHeight:", para.offsetHeight);
+
+   var para = document.getElementById("para");
+   console.log(para.style.color);
+   para.style.color = "magenta";
+
+</script>
